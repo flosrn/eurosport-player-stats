@@ -8,8 +8,8 @@ interface Props {
 
 const LayoutPage: React.FC<Props> = ({ children }) => {
   return (
-    <div className="">
-      <header className="fixed w-full top-0 left-0 flex justify-between items-center py-4 px-10 border-b border-blue-eurosport z-10">
+    <>
+      <header className="fixed bg-black w-full top-0 left-0 flex justify-between items-center py-4 px-10 border-b border-blue-eurosport z-50">
         <div className="flex">
           <Link href="/">
             <a>
@@ -21,8 +21,10 @@ const LayoutPage: React.FC<Props> = ({ children }) => {
           <a className="text-white">Home</a>
         </Link>
       </header>
-      <section className="relative h-screen flex justify-center items-center">{children}</section>
-    </div>
+      <section className="relative md:h-screen flex flex-col justify-center items-center">
+        {children}
+      </section>
+    </>
   );
 };
 
