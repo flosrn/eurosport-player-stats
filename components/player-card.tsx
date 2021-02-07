@@ -4,7 +4,7 @@ import { Player } from "interfaces/Player";
 
 const PlayerCard: React.FC<Player> = ({ firstname, lastname, picture, country, stats }) => {
   return (
-    <div className="flex relative w-full">
+    <div id="playerCard" className="flex relative w-full">
       <div className="w-full lg:mb-8 sm:mb-8 bg-gray-900 leading-4 mb-5 relative">
         <div
           className="bg-no-repeat bg-cover border-0 px-5 block h-full  absolute text-gray-500 w-full"
@@ -133,7 +133,7 @@ const PlayerCard: React.FC<Player> = ({ firstname, lastname, picture, country, s
                               <div className="cursor-pointer flex items-center font-sans leading-4 p-0 text-gray-300 align-baseline">
                                 <div className="border-0 font-sans font-bold m-0 text-left uppercase truncate">
                                   <span className="cursor-pointer font-bold leading-4 p-0 text-gray-300 align-baseline whitespace-no-wrap">
-                                    Win
+                                    Wins
                                   </span>
                                 </div>
                               </div>
@@ -144,7 +144,10 @@ const PlayerCard: React.FC<Player> = ({ firstname, lastname, picture, country, s
                           </div>
                           <div className="flex cursor-pointer items-stretch flex-grow-0 flex-shrink-0 font-bold leading-4 p-0 text-gray-500">
                             <div className="border-0 flex items-center leading-4 m-0 text-left align-baseline w-8">
-                              <div className="cursor-pointer font-sans text-base leading-none m-auto p-0 text-gray-300">
+                              <div
+                                data-test="player-last-wins"
+                                className="cursor-pointer font-sans text-base leading-none m-auto p-0 text-gray-300"
+                              >
                                 {stats.last.filter(Boolean).length}
                               </div>
                             </div>
@@ -157,7 +160,7 @@ const PlayerCard: React.FC<Player> = ({ firstname, lastname, picture, country, s
                               <div className="cursor-pointer flex items-center font-sans leading-4 p-0 text-gray-500 align-baseline">
                                 <div className="border-0 font-sans font-bold m-0 text-left uppercase truncate">
                                   <span className="cursor-pointer font-bold leading-4 p-0 text-gray-500 align-baseline whitespace-no-wrap">
-                                    Loose
+                                    Looses
                                   </span>
                                 </div>
                               </div>
@@ -166,7 +169,10 @@ const PlayerCard: React.FC<Player> = ({ firstname, lastname, picture, country, s
                           </div>
                           <div className="flex cursor-pointer items-stretch flex-grow-0 flex-shrink-0 font-bold leading-4 p-0 text-gray-500">
                             <div className="border-0 flex items-center leading-4 m-0 text-left align-baseline w-8">
-                              <div className="cursor-pointer font-sans text-base leading-none m-auto p-0 text-gray-300">
+                              <div
+                                data-test="player-last-looses"
+                                className="cursor-pointer font-sans text-base leading-none m-auto p-0 text-gray-300"
+                              >
                                 {stats.last.filter((el) => !el).length}
                               </div>
                             </div>
