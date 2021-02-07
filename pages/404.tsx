@@ -5,7 +5,7 @@ import LayoutPage from "components/layout-page";
 const ErrorPage: React.FC = () => {
   return (
     <LayoutPage title="Page not found">
-      <div className="relative h-full flex justify-center items-center">
+      <div className="relative h-screen flex justify-center items-center -mt-24">
         <div className="text-center flex flex-col items-center">
           <h1 className="flex flex-col justify-center items-center text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl">
             <span className="block dark:text-gray-100 text-3xl md:text-4xl">PAGE NOT FOUND :(</span>
